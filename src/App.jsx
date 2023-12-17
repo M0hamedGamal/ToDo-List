@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {ThemeProvider, createTheme} from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import './App.css'
-import Navbar from "./navbar/Navbar.jsx";
+import Navbar from "./components/navbar/Navbar.jsx";
 import TodoList from "./components/todoList/TodoList.jsx";
 
 function App() {

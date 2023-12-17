@@ -22,7 +22,7 @@ export default function CreateToDoModal({open, handleClose, dispatch}) {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
 
-    const submit = () => {
+    const addNewTodo = () => {
         dispatch({type: 'ADD', payload: {title, description}})
         handleClose()
     }
@@ -39,7 +39,7 @@ export default function CreateToDoModal({open, handleClose, dispatch}) {
                     <div className='todo-modal-items'>
                     <TextField label="Title" variant="standard" style={{margin: '24px'}} value={title} onChange={(e) => setTitle(e.target.value)}/>
                     <TextField label="Description" variant="standard" style={{margin: '24px'}} value={description} onChange={(e) => setDescription(e.target.value)}/>
-                    <Button onClick={submit}>Submit</Button>
+                    <Button onClick={addNewTodo}>New ToDo</Button>
                     </div>
                 </Box>
             </Modal>

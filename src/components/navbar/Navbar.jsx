@@ -1,5 +1,5 @@
 import React from 'react';
-import Toggle from "../components/toggle/Toggle.jsx";
+import Toggle from "../toggle/Toggle.jsx";
 
 function Navbar({toggleDarkMode, toggleDarkTheme}) {
     return (
