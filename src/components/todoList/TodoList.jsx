@@ -36,12 +36,13 @@ const reducer = (state, action) => {
             item.checked = !item.checked
 
             if (item.checked) {
-                console.log('yea')
                 const today = new Date();
                 const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
                 const time = today.getHours() + ":" + today.getMinutes();
                 const dateTime = date + ' ' + time;
                 item.finishedAt = dateTime
+            } else {
+                item.finishedAt = ''
             }
 
             localStorage.setItem('todo', JSON.stringify(newState))
@@ -132,7 +133,7 @@ const TodoList = () => {
         },
         {
             field: 'archivedAt',
-            headerName: 'Archive At',
+            headerName: 'Archived At',
             sortable: false,
             flex: 1,
             minWidth: 150,
@@ -180,7 +181,7 @@ const TodoList = () => {
                     )
                 }}
             />
-            <Weather />
+            <Weather/>
             <CreateToDoModal open={open} handleClose={handleClose} dispatch={dispatch}/>
         </div>
     );
