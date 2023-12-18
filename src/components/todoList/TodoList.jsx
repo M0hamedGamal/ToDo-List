@@ -8,6 +8,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import {useReducer} from "react";
 import CreateToDoModal from "./CreateToDo";
 import TodoHeader from "./TodoHeader.jsx";
+import Weather from "../weather/Weather.jsx";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -179,6 +180,7 @@ const TodoList = () => {
                     )
                 }}
             />
+            <Weather />
             <CreateToDoModal open={open} handleClose={handleClose} dispatch={dispatch}/>
         </div>
     );
